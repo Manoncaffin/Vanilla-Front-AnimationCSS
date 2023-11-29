@@ -31,12 +31,12 @@ html, body{
     position: absolute;
     top: -50px;
     left: 0;
-    animation-name: drive;
-    animation-duration: 5s;
+    animation-name: mario-jump, drive;
+    animation-duration: 1s, 5s;
     animation-direction: normal;
     animation-fill-mode: ;
     animation-delay: ;
-    animation-timing-function: ;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
     z-index: 5;
   }
@@ -48,9 +48,9 @@ html, body{
     animation-name: drive;
     animation-duration: 5.3s;
     animation-direction: normal;
-    animation-fill-mode: ;
+    animation-fill-mode: backwards;
     animation-delay: ;
-    animation-timing-function: ;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
   .cloud{
@@ -85,11 +85,11 @@ html, body{
     top: 45%;
     left: 0;
     animation-name: lines-move;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-direction: reverse;
     animation-fill-mode: ;
     animation-delay: ;
-    animation-timing-function: ;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
   /*// KEYFRAMES //*/
@@ -97,14 +97,14 @@ html, body{
     0%{
       
     }
-    100%{transform: translateX(2000px);
+    100%{transform: translateX(2500px);
     }
   }
   @keyframes mario-jump {
     0%{
       
     }
-    48% {
+    48% {transform: translateY(-100px);
     }
     50% {
     }
@@ -123,7 +123,7 @@ html, body{
     }
   }
   @keyframes lines-move {
-    0%{
+    0%{transform: translateX(-600px);
       
     }
     100%{transform: translateX(-200px);
